@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Activate Student</title>
+  </head>
+  <body>
+    <h1><%= @student.to_s %></h1>
+    <h3>Student Status: <%= @student.check_student_status%></h3>
+    <form action="/students/<%=@student.id%>" method="post">
+      <input type="hidden" name="_method" value="PATCH">
+      
+      <input type="radio" name="active" value="False">
+      <input type="radio" name="active" value="True">
+      <input type="submit" value="Change Status">
+    </form>
+  </body>
+</html>

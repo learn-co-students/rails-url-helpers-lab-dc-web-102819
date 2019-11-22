@@ -1,1 +1,7 @@
 <h1><%= @student.to_s %></h1>
+
+<h3>Student Status: <%= @student.check_student_status%></h3>
+<a href="/students/<%=@student.id%>/activate">Change status</a>
+
+
+<!-- visit activate_student_path(@student) -->
